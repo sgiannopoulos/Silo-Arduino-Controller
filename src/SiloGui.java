@@ -50,7 +50,7 @@ public class SiloGui extends JFrame {
 		scrollPane.setLocation(20, 50);	
 		add(scrollPane);
 		
-		// ComboBox and Connect Button
+		// Connect Button and ComboBox
 		ConnectBut connectButton = new ConnectBut(120, 20, 110, 5);	
 		add(connectButton);		
 		
@@ -61,7 +61,27 @@ public class SiloGui extends JFrame {
 		}
 		portList.setBounds(20, 5, 70, 20);
 		add(portList);
-
+		
+		Thread t = new Thread(){		//	Disables buttons before connecting to the port
+			@Override
+			public void run(){
+				while(true){
+					if(connectButton.getText().equals("Connect")){
+						try{Thread.sleep(1);} catch(Exception e){};	
+						heat.setEnabled(false);
+						water.setEnabled(false);
+						mixer.setEnabled(false);
+					}else {
+						try{Thread.sleep(1);} catch(Exception e){};	
+						heat.setEnabled(true);
+						water.setEnabled(true);
+						mixer.setEnabled(true);
+					}
+				}
+			}
+		};
+		t.start();
+		
 	}
 
 }

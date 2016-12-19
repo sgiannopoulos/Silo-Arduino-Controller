@@ -20,8 +20,8 @@ public class MixerBut extends JButton implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Operations.mixer();
-//		JOptionPane.showMessageDialog(SiloEngine.silogui, "The mixer is online.", "Silo Status",
-//				JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(SiloEngine.silogui, "The mixer is online.", "Silo Status",
+				JOptionPane.INFORMATION_MESSAGE);
 
 	}
 }

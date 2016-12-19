@@ -9,7 +9,7 @@ public class SiloEngine {
 
 			public void run() {
 				silogui = new SiloGui(); // Construction of the GUI
-				System.out.println("running");
+				System.out.println("Silo GUI running");
 
 			}
 

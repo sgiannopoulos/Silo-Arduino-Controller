@@ -33,9 +33,11 @@ public class ConnectBut extends JButton implements ActionListener {
 				SiloGui.portList.setEnabled(false);
 				SiloGui.txtarea.append("Silo Contoller Initiated...\n");	//Message to the GUI that the Port has been successfully opened
 			}
-			dataIn.start();		// 	Starting to listen for data
-			dataOut.start();	//	Standing by to send data
+//			dataIn.start();		// 	Starting to listen for data
+//			dataOut.start();	//	Standing by to send data
 			
+			SiloGui.txtarea.append(DataListener.dataInput);	//	Logs data input to the JTextArea object of the GUI
+		
 		} else {		// Returns functionality for the Connect button and the portList object
 			SiloGui.chosenPort.closePort();
 			SiloGui.portList.setEnabled(true);

@@ -1,8 +1,8 @@
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class DataListener extends Thread {
 	public static String dataInput;
+
 	@Override
 	public void run() {
 		Scanner scanner = new Scanner(SiloGui.chosenPort.getInputStream());
@@ -16,7 +16,6 @@ public class DataListener extends Thread {
 		}
 		scanner.close();
 		SiloGui.txtarea.append("Silo Contoller stopped.\n");
-
 	}
 
 }

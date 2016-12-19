@@ -6,7 +6,7 @@ public class Operations {
 		SiloGui.txtarea.append("The silo is being heated.\n");
 		try{	
 			DataSend.string = "heat";
-			System.out.println("sending data");
+			System.out.println("(sending data)");
 		}catch(Exception e){
 			System.out.println(e);
 		}
@@ -16,7 +16,7 @@ public class Operations {
 		SiloGui.txtarea.append("The water pump is online.\n");
 		try{	
 			DataSend.string = "water";
-			System.out.println("sending data");
+			System.out.println("(sending data)");
 		}catch(Exception e){
 			System.out.println(e);
 		}
@@ -27,7 +27,7 @@ public class Operations {
 		SiloGui.txtarea.append("The mixer is online.\n");
 		try{	
 			DataSend.string = "mixer";
-			System.out.println("sending data");
+			System.out.println("(sending data)");
 		}catch(Exception e){
 			System.out.println(e);
 		}
